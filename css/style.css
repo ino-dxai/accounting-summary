@@ -40,24 +40,15 @@ body {
 }
 
 .header h1 {
-    font-size: 5rem;
+    font-size: 15rem;
     margin-bottom: 0.5rem;
     font-weight: 700;
     display: inline-block;
     padding: 0.2em 0.5em;
     border-radius: 8px;
-    animation: rainbowBg 4s linear infinite;
+    background-color: #2563eb;
 }
 
-@keyframes rainbowBg {
-    0%   { background-color: hsl(0,   100%, 50%); }
-    17%  { background-color: hsl(60,  100%, 50%); }
-    33%  { background-color: hsl(120, 100%, 40%); }
-    50%  { background-color: hsl(180, 100%, 40%); }
-    67%  { background-color: hsl(240, 100%, 55%); }
-    83%  { background-color: hsl(300, 100%, 50%); }
-    100% { background-color: hsl(360, 100%, 50%); }
-}
 
 .header .subtitle {
     font-size: 1.1rem;
