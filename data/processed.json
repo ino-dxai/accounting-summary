@@ -1,0 +1,37 @@
+{
+  "lastUpdated": "2024-01-20 10:30:00",
+  "generatedAt": "2024-01-20T10:30:00Z",
+  "stats": {
+    "totalCount": 2847,
+    "todayCount": 42,
+    "thisWeekCount": 298,
+    "categories": {
+      "agree": 1203,
+      "disagree": 892,
+      "neutral": 752
+    }
+  },
+  "opinions": [
+    {
+      "id": "op_001",
+      "text": "freeeを使ってから経理業務が楽になった。",
+      "category": "agree",
+      "source": "X",
+      "date": "2024-01-20",
+      "software": "freee"
+    }
+  ],
+  "software": [
+    {
+      "name": "freee",
+      "count": 623,
+      "percent": 21.9
+    }
+  ],
+  "trends": [
+    {
+      "keyword": "クラウド型会計",
+      "count": 456
+    }
+  ]
+}
