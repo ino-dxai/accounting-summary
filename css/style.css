@@ -60,6 +60,89 @@ body {
     100% { background-color: hsl(210, 100%, 40%); }
 }
 
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 2rem;
+}
+
+.header-title {
+    flex: 1;
+}
+
+.calendar-clock {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    padding: 1rem 1.2rem;
+    min-width: 230px;
+    color: white;
+    flex-shrink: 0;
+}
+
+.cal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.4rem;
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+.cal-header button {
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 1px 6px;
+    font-size: 0.75rem;
+    line-height: 1.4;
+}
+
+.cal-header button:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.cal-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.78rem;
+}
+
+.cal-table th,
+.cal-table td {
+    text-align: center;
+    padding: 2px 2px;
+    width: 14.28%;
+}
+
+.cal-table th.sun,
+.cal-table td.sun {
+    color: #ffaaaa;
+}
+
+.cal-table th.sat,
+.cal-table td.sat {
+    color: #aaddff;
+}
+
+.cal-table td.today {
+    background: rgba(255, 255, 255, 0.35);
+    border-radius: 50%;
+    font-weight: bold;
+    color: white;
+}
+
+.clock-display {
+    text-align: center;
+    font-size: 1.9rem;
+    font-weight: bold;
+    margin-top: 0.7rem;
+    font-family: 'Courier New', monospace;
+    letter-spacing: 3px;
+}
+
 .header .subtitle {
     font-size: 1.1rem;
     opacity: 0.95;
