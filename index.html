@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>中小企業会計・財務 まとめサイト</title>
+    <title>会計ソフト導入のメリット・デメリット | 中小企業会計・財務 まとめサイト</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- ヘッダー -->
     <header class="header">
         <div class="container">
             <h1>📊 中小企業会計・財務 まとめサイト</h1>
@@ -15,18 +16,135 @@
         </div>
     </header>
 
+    <!-- メインコンテンツ -->
     <main class="container">
+        
+        <!-- メイン記事セクション -->
+        <article class="main-article">
+            <h2>📖 会計ソフト導入のメリット・デメリット</h2>
+            
+            <div class="article-content">
+                <h3>はじめに</h3>
+                <p>中小企業が会計ソフトを導入するかどうかは、大きな経営判断です。このページでは、実際のユーザーの声をもとに、メリットとデメリットを整理しました。</p>
+
+                <h3>会計ソフト導入の主なメリット</h3>
+                <div class="benefits">
+                    <div class="benefit-card">
+                        <h4>✓ メリット1: 手作業の削減</h4>
+                        <p>銀行口座やクレジットカードを連携させれば、仕訳が自動化されます。毎月の経理作業が数時間削減できます。</p>
+                    </div>
+                    <div class="benefit-card">
+                        <h4>✓ メリット2: ミスの減少</h4>
+                        <p>手動入力による計算ミスが減り、帳簿の正確性が向上します。決算時の修正作業も減ります。</p>
+                    </div>
+                    <div class="benefit-card">
+                        <h4>✓ メリット3: 税理士との連携</h4>
+                        <p>クラウド会計ソフトなら、税理士とリアルタイムでデータ共有できます。確定申告が楽になります。</p>
+                    </div>
+                </div>
+
+                <h3>会計ソフト導入の主なデメリット</h3>
+                <div class="demerits">
+                    <div class="demerit-card">
+                        <h4>✗ デメリット1: 初期設定の複雑さ</h4>
+                        <p>勘定科目の設定や連携設定が複雑で、初心者には難しいです。導入に時間がかかります。</p>
+                    </div>
+                    <div class="demerit-card">
+                        <h4>✗ デメリット2: 月額費用がかかる</h4>
+                        <p>クラウド会計ソフトは月額1,000～3,000円程度かかります。年間で1～4万円のコスト増になります。</p>
+                    </div>
+                    <div class="demerit-card">
+                        <h4>✗ デメリット3: 高機能すぎることもある</h4>
+                        <p>大企業向けの機能が多すぎて、小規模事業者には不要な機能がたくさんあります。</p>
+                    </div>
+                </div>
+
+                <h3>こんな企業に会計ソフトはおすすめ</h3>
+                <ul>
+                    <li>毎月の取引が100件以上ある</li>
+                    <li>税理士と連携したい</li>
+                    <li>経理担当者が不足している</li>
+                    <li>月額費用を経費として計上できる余裕がある</li>
+                </ul>
+            </div>
+        </article>
+
+        <!-- 統計セクション -->
         <section class="stats-section">
-            <h2>📈 統計情報</h2>
+            <h2>📈 この記事に関する意見の統計</h2>
             <div class="stats-grid">
                 <div class="stat-card">
                     <h3>総投稿数</h3>
                     <p class="stat-number" id="totalCount">-</p>
                 </div>
+                <div class="stat-card">
+                    <h3>本日の投稿</h3>
+                    <p class="stat-number" id="todayCount">-</p>
+                </div>
+                <div class="stat-card">
+                    <h3>カテゴリ分布</h3>
+                    <div id="categoryChart" class="mini-chart">読込中...</div>
+                </div>
             </div>
         </section>
+
+        <!-- 意見セクション -->
+        <section class="opinions-section">
+            <h2>💬 5ch・X からの実際の意見</h2>
+
+            <!-- メリットに同意 -->
+            <div class="category-group">
+                <h3 class="category-title agree">✅ メリットに同意する意見</h3>
+                <div class="opinions-list" id="agreeOpinions">
+                    <p class="loading">読込中...</p>
+                </div>
+            </div>
+
+            <!-- デメリット指摘 -->
+            <div class="category-group">
+                <h3 class="category-title disagree">❌ デメリットを指摘する意見</h3>
+                <div class="opinions-list" id="disagreeOpinions">
+                    <p class="loading">読込中...</p>
+                </div>
+            </div>
+
+            <!-- 中立的 -->
+            <div class="category-group">
+                <h3 class="category-title neutral">🤔 中立的な意見（比較・検討）</h3>
+                <div class="opinions-list" id="neutralOpinions">
+                    <p class="loading">読込中...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 会計ソフト別分析 -->
+        <section class="software-section">
+            <h2>🛠️ よく登場する会計ソフト</h2>
+            <div class="software-list" id="softwareList">
+                <p class="loading">読込中...</p>
+            </div>
+        </section>
+
+        <!-- 注釈 -->
+        <section class="info-section">
+            <h2>ℹ️ このサイトについて</h2>
+            <p>このサイトは5chやX（Twitter）から収集された中小企業の会計・財務に関する実際の投稿を、AIを使って自動分類・整理したものです。</p>
+            <ul>
+                <li>✓ 毎日自動更新されます</li>
+                <li>✓ 個人情報は自動的にマスクされています</li>
+                <li>✓ オープンソースで、GitHubで管理されています</li>
+                <li>⚠️ 投稿内容は参考情報です。最終判断は自己責任でお願いします</li>
+            </ul>
+        </section>
     </main>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <p>© 2024 中小企業会計・財務 まとめサイト | 
+           <a href="https://github.com/ino-dxai/accounting-summary" target="_blank">GitHub</a></p>
+    </footer>
 
     <script src="js/script.js"></script>
 </body>
 </html>
+`

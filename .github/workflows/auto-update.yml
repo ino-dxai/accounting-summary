@@ -1,37 +1,183 @@
-name: Daily Auto-Update Accounting Summary
-
-on:
-  schedule:
-    - cron: '0 1 * * *'
-  workflow_dispatch:
-
-jobs:
-  update:
-    runs-on: ubuntu-latest
-    
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-      
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18'
-      
-      - name: Run update script
-        run: |
-          node scripts/update-script.js
-      
-      - name: Commit and push changes
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          
-          if git diff-index --quiet HEAD --; then
-            echo "No changes to commit"
-            exit 0
-          fi
-          
-          git add data/
-          git commit -m "chore: auto-update opinions and statistics"
-          git push
+{
+  "lastUpdated": "2024-01-20 14:30:00",
+  "generatedAt": "2024-01-20T14:30:00Z",
+  "theme": "会計ソフト導入のメリット・デメリット",
+  "stats": {
+    "totalCount": 45,
+    "todayCount": 8,
+    "thisWeekCount": 28,
+    "categories": {
+      "agree": 18,
+      "disagree": 15,
+      "neutral": 12
+    }
+  },
+  "opinions": [
+    {
+      "id": "op_001",
+      "text": "freeeを導入してから月の経理時間が20時間から5時間に削減できた。自動仕訳が本当に便利。",
+      "category": "agree",
+      "source": "X",
+      "date": "2024-01-20",
+      "software": "freee",
+      "keywords": ["自動化", "時間削減"]
+    },
+    {
+      "id": "op_002",
+      "text": "初期設定が難しくて、税理士に依頼した。余計な費用がかかった。",
+      "category": "disagree",
+      "source": "5ch",
+      "date": "2024-01-20",
+      "software": "弥生会計",
+      "keywords": ["初期設定", "コスト"]
+    },
+    {
+      "id": "op_003",
+      "text": "MFクラウドは使いやすいが、高機能な部分が不要に感じる。",
+      "category": "neutral",
+      "source": "X",
+      "date": "2024-01-19",
+      "software": "MFクラウド",
+      "keywords": ["使いやすさ", "機能"]
+    },
+    {
+      "id": "op_004",
+      "text": "クラウド会計にしたら、税理士との連携がスムーズになった。決算申告が楽になったのが最大のメリット。",
+      "category": "agree",
+      "source": "5ch",
+      "date": "2024-01-19",
+      "software": "freee",
+      "keywords": ["税理士連携", "効率化"]
+    },
+    {
+      "id": "op_005",
+      "text": "月額2,000円が小規模事業者には意外と負担。売上が低いときはキツい。",
+      "category": "disagree",
+      "source": "X",
+      "date": "2024-01-18",
+      "software": "MFクラウド",
+      "keywords": ["コスト", "小規模事業"]
+    },
+    {
+      "id": "op_006",
+      "text": "手書きと比較して、ミスが圧倒的に減った。帳簿の正確性が向上する。",
+      "category": "agree",
+      "source": "X",
+      "date": "2024-01-18",
+      "software": "弥生会計",
+      "keywords": ["正確性", "ミス削減"]
+    },
+    {
+      "id": "op_007",
+      "text": "どのソフトも機能が多すぎて、実務に必要な部分しか使ってない。",
+      "category": "neutral",
+      "source": "5ch",
+      "date": "2024-01-17",
+      "software": "その他",
+      "keywords": ["機能", "使い方"]
+    },
+    {
+      "id": "op_008",
+      "text": "銀行口座連携で仕訳が自動化される。これだけで導入する価値がある。",
+      "category": "agree",
+      "source": "X",
+      "date": "2024-01-17",
+      "software": "freee",
+      "keywords": ["自動仕訳", "利便性"]
+    },
+    {
+      "id": "op_009",
+      "text": "セキュリティが心配で、オンプレミスの弥生会計を使い続けてる。",
+      "category": "disagree",
+      "source": "5ch",
+      "date": "2024-01-16",
+      "software": "弥生会計",
+      "keywords": ["セキュリティ", "クラウド"]
+    },
+    {
+      "id": "op_010",
+      "text": "freeeとMFクラウドの両方を使ったことあるが、それぞれ一長一短。業務内容で選ぶべき。",
+      "category": "neutral",
+      "source": "X",
+      "date": "2024-01-16",
+      "software": "freee",
+      "keywords": ["比較", "選択"]
+    }
+  ],
+  "software": [
+    {
+      "name": "freee",
+      "count": 18,
+      "percent": 40.0,
+      "sentiment": {
+        "positive": 12,
+        "negative": 3,
+        "neutral": 3
+      }
+    },
+    {
+      "name": "MFクラウド",
+      "count": 12,
+      "percent": 26.7,
+      "sentiment": {
+        "positive": 5,
+        "negative": 4,
+        "neutral": 3
+      }
+    },
+    {
+      "name": "弥生会計",
+      "count": 10,
+      "percent": 22.2,
+      "sentiment": {
+        "positive": 1,
+        "negative": 6,
+        "neutral": 3
+      }
+    },
+    {
+      "name": "その他",
+      "count": 5,
+      "percent": 11.1,
+      "sentiment": {
+        "positive": 0,
+        "negative": 2,
+        "neutral": 3
+      }
+    }
+  ],
+  "trends": [
+    {
+      "keyword": "自動化",
+      "count": 12,
+      "trend": "up"
+    },
+    {
+      "keyword": "税理士連携",
+      "count": 9,
+      "trend": "up"
+    },
+    {
+      "keyword": "初期設定",
+      "count": 8,
+      "trend": "down"
+    },
+    {
+      "keyword": "コスト",
+      "count": 7,
+      "trend": "up"
+    },
+    {
+      "keyword": "クラウド",
+      "count": 6,
+      "trend": "up"
+    }
+  ],
+  "metadata": {
+    "version": "1.0",
+    "dataSource": ["5ch", "X"],
+    "processingMethod": "Claude API Auto-categorization",
+    "privacyNote": "All personal information has been masked",
+    "disclaimer": "This is aggregated data for reference only. Final decisions should be made independently."
+  }
+}
