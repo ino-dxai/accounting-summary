@@ -70,6 +70,37 @@ body {
     opacity: 0.8;
 }
 
+/* 階層番号 */
+main {
+    counter-reset: h2counter;
+}
+
+main h2 {
+    counter-increment: h2counter;
+    counter-reset: h3counter;
+}
+
+main h2::before {
+    content: counter(h2counter) ". ";
+}
+
+main h3 {
+    counter-increment: h3counter;
+    counter-reset: h4counter;
+}
+
+main h3::before {
+    content: counter(h2counter) "." counter(h3counter) ". ";
+}
+
+main h4 {
+    counter-increment: h4counter;
+}
+
+main h4::before {
+    content: counter(h2counter) "." counter(h3counter) "." counter(h4counter) ". ";
+}
+
 section {
     margin-bottom: 3rem;
     padding-bottom: 2rem;
