@@ -46,17 +46,18 @@ body {
     display: inline-block;
     padding: 0.2em 0.5em;
     border-radius: 8px;
+    color: red;
     animation: rainbowBg 4s linear infinite;
 }
 
 @keyframes rainbowBg {
-    0%   { background-color: hsl(0,   100%, 50%); }
-    17%  { background-color: hsl(60,  100%, 50%); }
-    33%  { background-color: hsl(120, 100%, 40%); }
-    50%  { background-color: hsl(180, 100%, 40%); }
-    67%  { background-color: hsl(240, 100%, 55%); }
-    83%  { background-color: hsl(300, 100%, 50%); }
-    100% { background-color: hsl(360, 100%, 50%); }
+    0%   { background-color: hsl(210, 100%, 40%); }
+    17%  { background-color: hsl(220, 100%, 45%); }
+    33%  { background-color: hsl(200, 100%, 35%); }
+    50%  { background-color: hsl(230, 100%, 50%); }
+    67%  { background-color: hsl(195, 100%, 40%); }
+    83%  { background-color: hsl(215, 100%, 45%); }
+    100% { background-color: hsl(210, 100%, 40%); }
 }
 
 .header .subtitle {
