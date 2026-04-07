@@ -46,7 +46,7 @@ body {
     display: inline-block;
     padding: 0.2em 0.5em;
     border-radius: 8px;
-    color: red;
+    color: black;
     animation: rainbowBg 4s linear infinite;
 }
 
