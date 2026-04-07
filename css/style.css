@@ -110,7 +110,7 @@ section {
 h2 {
     font-size: 1.875rem;
     margin-bottom: 1.5rem;
-    color: var(--text-dark);
+    color: red;
     font-weight: 600;
 }
 
